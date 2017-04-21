@@ -4,6 +4,7 @@ import { HeroSearchComponent } from './hero-search.component';
 import { FormsModule } from "@angular/forms";
 import { RouterTestingModule } from "@angular/router/testing";
 import { HeroSearchService } from "app/hero-search.service";
+import { HttpModule } from "@angular/http";
 
 describe('HeroSearchComponent', () => {
   let component: HeroSearchComponent;
@@ -12,7 +13,7 @@ describe('HeroSearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HeroSearchComponent ],
-      imports: [ FormsModule, RouterTestingModule ],
+      imports: [ FormsModule, RouterTestingModule, HttpModule ],
       providers: [ HeroSearchService ]
     })
     .compileComponents();

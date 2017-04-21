@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from "app/hero-search/hero-search.component";
 import { HeroService } from "app/hero.service";
+import { HttpModule } from "@angular/http";
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -14,7 +15,7 @@ describe('DashboardComponent', () => {
         DashboardComponent,
         HeroSearchComponent 
       ],
-      imports: [ RouterTestingModule ],
+      imports: [ RouterTestingModule, HttpModule],
       providers: [ HeroService ] 
     })
     .compileComponents();

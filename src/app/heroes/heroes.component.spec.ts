@@ -6,6 +6,7 @@ import { HeroService } from "app/hero.service";
 import { HeroDetailComponent } from "app/hero-detail/hero-detail.component";
 import { AppComponent } from "app/app.component";
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpModule } from "@angular/http";
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -17,7 +18,7 @@ describe('HeroesComponent', () => {
         AppComponent,
         HeroesComponent,
         HeroDetailComponent ],
-      imports: [ FormsModule, RouterTestingModule ],
+      imports: [ FormsModule, RouterTestingModule, HttpModule ],
       providers: [HeroService]
     })
     .compileComponents();
